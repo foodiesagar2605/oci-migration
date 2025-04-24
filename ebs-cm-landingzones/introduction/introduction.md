@@ -39,18 +39,10 @@ The following figure outlines the workshop architecture.
 
 This workshop uses the following components: 
 * Trial accounts (one per attendee)
-* Virtual Cloud Network and related resources
-    * User-generated, using Resource Manager and the provided Terraform script
-* Oracle E-Business Suite Cloud Manager Compute instance
-    * User-provisioned using Oracle Marketplace image
-    * Oracle E-Business Suite Cloud Manager application
-    * EBS sandbox network deployment script
-* Oracle E-Business Suite environment 1 Compute instance
-    * User provisioned environment
-    * Application and database tiers on this compute instance
-* Oracle E-Business Suite environment 2 Compute instance
-    * Cloned from environment 1
-    * Application and database tiers on this compute instance
+* Marketplace stacks
+    * Oracle E-Business Suite: Tenancy Admin Stack for Landing Zones
+    * Oracle E-Business Suite: Network Admin Stack for Landing Zones
+    * Oracle E-Business Suite: Cloud Manager Deployment Stack for Landing Zones
 
 The following table describes the exercises you will perform in this workshop.
 
@@ -58,10 +50,10 @@ The following table describes the exercises you will perform in this workshop.
 
 | What          |      How      |  Notes |
 | ------------- | ------------- | ------------- |
-| **Lab 1**: Getting Started  | Download `key-data.txt`, establish Oracle Cloud account | You will use the `key-data.txt` file to record information that you will use throughout the workshop. |
-| **Lab 2**: Set up the landing zone |  Create the foundation; Create the network | Run the tenancy admin and network Resource Manager stacks to create the compartment distribution and network. |
-| **Lab 3**: Register EBS Suite Cloud Manager as a confidential application | Register EBS Cloud Manager as a confidential application in tenancies using IAM with identity domains | Configure EBS Cloud Manager authentication using IAM with identity domains. |
-| **Lab 4**: Deploy and configure EBS Cloud Manager  | Deploy and configure EBS Cloud Manager and required resources| Use the OCI Resource Manager stack to deploy the EBS Cloud Manager Compute instance and configure the web application. |
+| **Lab 1**: Get Started | Download `key-data.txt`, establish Oracle Cloud account | You will use the `key-data.txt` file to record information that you will use throughout the workshop. |
+| **Lab 2**: Set Up the Landing Zone | Create the foundation; Create the network | Run the EBS Tenancy Admin Stack for Landing Zones and EBS Network Admin Stack for Landing Zones to create the compartment distribution and network. |
+| **Lab 3**: Register EBS Cloud Manager as a Confidential Application | Register EBS Cloud Manager as a confidential application in tenancies using IAM with identity domains | Configure EBS Cloud Manager authentication using IAM with identity domains. |
+| **Lab 4**: Deploy and Configure EBS Cloud Manager | Deploy and configure EBS Cloud Manager and required resources| Use the EBS Cloud Manager Deployment Stack for Landing Zones to deploy the Cloud Manager Compute instance and configure the web application. |
 <!--| **Lab 5**: Provision your EBS environment | Use One-Click Provisioning to create and configure your first EBS environment | Provision an environment using One-Click Provisioning; Enable and set EBS account passwords; Open firewall and security list to allow connections to EBS environment; Configure local hosts file and log in to EBS. |-->
 
 ## Learn More
@@ -73,4 +65,4 @@ The following table describes the exercises you will perform in this workshop.
 ## Acknowledgements
 * **Author** - Santiago Bastidas, Product Management Director
 * **Contributors** -  Tiffany Romero, Technical Writer; Terri Noyes, Product Management Director
-* **Last Updated By/Date** - Tiffany Romero, EBS Documentation, May 2024
+* **Last Updated By/Date** - Tiffany Romero, EBS Documentation, August 2024
